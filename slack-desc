@@ -1,0 +1,11 @@
+kchmviewer: KchmViewer (A CHM File Viewer for KDE)
+kchmviewer:
+kchmviewer: Unlike most existing CHM viewers for Unix, KchmViewer uses KDE
+kchmviewer: libraries for better KDE integration. It main advantage is the
+kchmviewer: best support for non-English languages. In most cases it is able
+kchmviewer: to correctly detect the chm file encoding and show it. KchmViwer
+kchmviewer: correctly shows the index and table of context in Russian, Korean,
+kchmviewer: Chinese and Japanese help files, and with new search engine is
+kchmviewer: able to search in any chm file no matter of what language it is
+kchmviewer: written.
+kchmviewer: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
