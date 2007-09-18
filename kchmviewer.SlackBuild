@@ -24,7 +24,7 @@ CFLAGS=$SLKCFLAGS \
 CXXFLAGS=$SLKCFLAGS \
 ./configure --build=$ARCH-slackware-linux \
             --host=$ARCH-slackware-linux \
-            --prefix=/opt/kde \
+            --prefix=/usr \
             --enable-shared=yes \
             --enable-static=no \
             --with-kde \
