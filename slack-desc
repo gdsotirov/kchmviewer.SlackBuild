@@ -8,4 +8,5 @@ kchmviewer: correctly shows the index and table of context in Russian, Korean,
 kchmviewer: Chinese and Japanese help files, and with new search engine is
 kchmviewer: able to search in any chm file no matter of what language it is
 kchmviewer: written.
+kchmviewer:
 kchmviewer: Packaged by Georgi D. Sotirov <gdsotirov@dir.bg>
