@@ -8,7 +8,7 @@
 . ../slack-package.conf
 
 NAME=kchmviewer
-VERSION=4.2
+VERSION=5.2
 BUILD=${BUILD:-1}
 ARCH=${ARCH:-i486}
 
@@ -35,8 +35,12 @@ mkdir -p $PKG
 # Extract the sources
 cd $TMP
 tar -xvf $CWD/$NAME-$VERSION.tar.gz || exit 1
+mv build-$VERSION $NAME-$VERSION
 cd $SRC
 fix_source
+
+# Apply patches
+patch -p1 < $CWD/$NAME-$VERSION.diff
 
 # Configure
 cmake -DCMAKE_BUILD_TYPE=None \
@@ -62,9 +66,10 @@ install -m 644 $CWD/slack-required $PKG/install/slack-required
 
 SBDIR=$PKG/usr/src/slackbuilds/$NAME-$VERSION
 install -m 755 -d $SBDIR
-install -m 644 $CWD/slack-desc       $SBDIR/slack-desc
-install -m 644 $CWD/slack-required   $SBDIR/slack-required
-install -m 644 $CWD/$NAME.SlackBuild $SBDIR/$NAME.SlackBuild
+install -m 644 $CWD/slack-desc          $SBDIR/slack-desc
+install -m 644 $CWD/slack-required      $SBDIR/slack-required
+install -m 644 $CWD/$NAME-$VERSION.diff $SBDIR/$NAME-$VERSION.diff
+install -m 644 $CWD/$NAME.SlackBuild    $SBDIR/$NAME.SlackBuild
 
 # Assemble
 cd $PKG
