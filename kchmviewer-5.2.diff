@@ -1,0 +1,20 @@
+diff -N -r -U 3 kchmviewer-5.2-orig/src/CMakeLists.txt kchmviewer-5.2/src/CMakeLists.txt
+--- kchmviewer-5.2-orig/src/CMakeLists.txt	2009-12-15 08:27:57.000000000 +0200
++++ kchmviewer-5.2/src/CMakeLists.txt	2010-09-22 23:48:03.000000000 +0300
+@@ -12,6 +12,8 @@
+ 	main.cpp
+ 	mainwindow.cpp
+ 	navigationpanel.cpp
++	toolbareditor.cpp
++	toolbarmanager.cpp
+ 	recentfiles.cpp
+ 	settings.cpp
+ 	tab_bookmarks.cpp
+@@ -32,6 +34,7 @@
+ 	dialog_topicselector.ui
+ 	mainwindow.ui
+ 	navigatorpanel.ui
++	toolbareditor.ui
+ 	tab_bookmarks.ui
+ 	tab_contents.ui
+ 	tab_index.ui
